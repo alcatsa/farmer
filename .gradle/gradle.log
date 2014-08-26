@@ -1,0 +1,174 @@
+The assetDir is deprecated!  Use runDir instead! runDir set to eclipse/assets/..The assetDir is deprecated!  Use runDir instead! runDir set to eclipse/assets/..
+
+****************************
+ Powered By MCP:            
+ http://mcp.ocean-labs.de/  
+ Searge, ProfMobius, Fesh0r,
+ R4wk, ZeuX, IngisKahn      
+ MCP Data version : unknown
+****************************
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+apiClasses - Assembles classes 'api'.
+    compileApiJava - Compiles Java source 'api:java'.
+    processApiResources - Processes resources 'api:resources'.
+assemble - Assembles the outputs of this project. [jar]
+    extractUserDev
+    genSrgs
+    reobf
+build - Assembles and tests this project. [assemble, check]
+buildDependents - Assembles and tests this project and all projects that depend on it. [build]
+buildNeeded - Assembles and tests this project and all projects it depends on. [build]
+classes - Assembles classes 'main'. [apiClasses]
+    compileJava - Compiles Java source 'main:java'.
+    processResources - Processes resources 'main:resources'.
+    sourceMainJava
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes. [classes]
+testClasses - Assembles classes 'test'. [apiClasses, classes]
+    compileTestJava - Compiles Java source 'test:java'.
+    processTestResources - Processes resources 'test:resources'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code. [classes]
+
+ForgeGradle tasks
+-----------------
+cleanCache - Cleares the ForgeGradle cache. DONT RUN THIS unless you want a fresh start, or the dev tells you to.
+debugClient - Runs the Minecraft client in debug mode [jar]
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    makeStart
+debugServer - Runs the Minecraft serevr in debug mode [jar]
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    makeStart
+runClient - Runs the Minecraft client [jar]
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    makeStart
+runServer - Runs the Minecraft Server [jar]
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    makeStart
+setupCIWorkspace - Sets up the bare minimum to build a minecraft mod. Idea for CI servers
+    applyBinPatches
+    deobfBinJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractUserDev
+    genSrgs
+    mergeJars
+setupDecompWorkspace - DevWorkspace + the deobfuscated Minecraft source linked as a source jar.
+    decompile
+    deobfuscateJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractMinecraftSrc
+    extractNatives
+    extractUserDev
+    genSrgs
+    getAssets
+    getAssetsIndex
+    makeStart
+    mergeJars
+    processSources
+    recompMinecraft
+    remapJar
+    repackMinecraft
+setupDevWorkspace - CIWorkspace + natives and assets to run and test Minecraft
+    applyBinPatches
+    deobfBinJar
+    downloadClient
+    downloadMcpTools
+    downloadServer
+    extractNatives
+    extractUserDev
+    genSrgs
+    getAssets
+    getAssetsIndex
+    makeStart
+    mergeJars
+
+Help tasks
+----------
+dependencies - Displays all dependencies declared in root project 'farmer'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'farmer'.
+help - Displays a help message
+projects - Displays the sub-projects of root project 'farmer'.
+properties - Displays the properties of root project 'farmer'.
+tasks - Displays the tasks runnable from root project 'farmer'.
+
+IDE tasks
+---------
+cleanEclipse - Cleans all Eclipse files.
+    cleanEclipseClasspath
+    cleanEclipseJdt
+    cleanEclipseProject
+cleanIdea - Cleans IDEA project files (IML, IPR)
+    cleanIdeaModule
+    cleanIdeaProject
+eclipse - Generates all Eclipse files.
+    eclipseClasspath - Generates the Eclipse classpath file.
+    eclipseJdt - Generates the Eclipse JDT settings file.
+    eclipseProject - Generates the Eclipse project file.
+idea - Generates IDEA project files (IML, IPR, IWS)
+    ideaModule - Generates IDEA module files (IML)
+    ideaProject - Generates IDEA project file (IPR)
+    ideaWorkspace - Generates an IDEA workspace file (IWS)
+
+Upload tasks
+------------
+uploadArchives - Uploads all artifacts belonging to configuration ':archives' [jar]
+    extractUserDev
+    genSrgs
+    reobf
+
+Verification tasks
+------------------
+check - Runs all checks. [test]
+test - Runs the unit tests. [classes, testClasses]
+    extractNatives
+    extractUserDev
+    getAssets
+    getAssetsIndex
+    makeStart
+
+Other tasks
+-----------
+afterEclipseImport
+cleanIdeaWorkspace
+genIntellijRuns
+install - Installs the 'archives' artifacts into the local Maven repository. [jar]
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+BUILD SUCCESSFUL
+
+Total time: 7.643 secs
