@@ -2,6 +2,8 @@ package net.counterearth.farmer;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import net.counterearth.farmer.handler.ConfigurationHandler;
+import net.counterearth.farmer.init.ModBlocks;
+import net.counterearth.farmer.init.ModItems;
 import net.counterearth.farmer.proxy.IProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -27,6 +29,10 @@ public class Farmer
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialization Complete");
+
+        ModItems.init();
+
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
